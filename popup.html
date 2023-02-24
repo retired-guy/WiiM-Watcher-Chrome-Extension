@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>WiiM Watcher</title>
+      <style>
+        .layout {
+          width: 600px;
+          height: 300px;
+
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          grid-auto-flow: row dense;
+        }
+        p {
+            color: black;
+            font-family: Helvetica;
+            font-size: 3vw;
+            margin: 25px 5px 10px 5px;
+            border: 2px;
+        }  
+        #meta {
+            padding 2px;
+            margin: 0px;
+        }    
+        #info {
+            position: absolute;
+            bottom: 0;
+            margin: 5;
+        }
+      </style>
+  </head>
+  <body>
+    <section class="layout">
+        <div id="coverart">
+            <img src="icons/music.png"  width="300" height="300"></img>
+        </div>
+        <div id="meta">
+            <span>
+                <img id='prev' src='icons/prev.svg'></img>
+                <img id='playpause' src='icons/pause.svg'></img>
+                <img id='next' src='icons/next.svg'></img>
+            </span>
+            <p id="artist"></p>
+            <p id="album"></p>
+            <p id="title"></p>
+            <p id="subtitle"></p>
+            <p id="info"></p>    
+        </div>
+    </section>      
+    <script src="popup.js"></script>
+  </body>
+</html>
